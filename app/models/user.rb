@@ -7,7 +7,7 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :nickname
     validates :birthday
-    validates :gender_id
+    validates :gender
     validates :height
     validates :diet_reason
   end
