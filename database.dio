@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2020-11-17T05:32:25.523Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" etag="giWkCulGxJe9KJCzeRpU" version="13.6.5">
+<mxfile host="65bd71144e" modified="2020-11-17T06:57:06.268Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" etag="50bDliSPGW9BWLlBzNeQ" version="13.6.5">
     <diagram id="Jr-oUmaQX-2kjp7Mdl6u" name="ページ1">
         <mxGraphModel dx="355" dy="2980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
@@ -102,7 +102,7 @@
                 <mxCell id="23" value="weight_at_the_day(現在の体重) float型・NOT NULL" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="21" vertex="1">
                     <mxGeometry y="56" width="330" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="24" value="method_id(ダイエット方法) integer型・NOT NULL" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="21" vertex="1">
+                <mxCell id="24" value="diet_method_id(ダイエット方法) integer型・NOT NULL" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="21" vertex="1">
                     <mxGeometry y="86" width="330" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="25" value="memo(メモ) text型" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="21" vertex="1">
