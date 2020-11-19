@@ -3,7 +3,7 @@ class DietMethod < ApplicationRecord
     validates :title
     validates :type_id
     validates :explanation
-    validates :user
   end
 
+  belongs_to :user
 end

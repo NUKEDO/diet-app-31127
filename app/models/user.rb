@@ -15,4 +15,5 @@ class User < ApplicationRecord
     validates :diet_reason, length: { maximum: 1024 }
   end
 
+  has_many :diet_method
 end
