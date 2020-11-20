@@ -3,6 +3,7 @@
     <div class="lists-left">サイトタイトル</div>
     <ul class='lists-right'>
       <% if user_signed_in? %>
+        <li><%= link_to 'ダイエット方法投稿', new_method_path, class: "diet-method-btn" %></li>
         <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
       <% else %>

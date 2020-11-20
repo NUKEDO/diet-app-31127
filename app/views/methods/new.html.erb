@@ -1,13 +1,37 @@
 <h1>ダイエット方法投稿</h1>
 <div></div>
 <div>
-<%= form_with model: @diet_method, local: true do |f| %>
+<%= form_with model: @diet_method, url: methods_path, method: :post, local: true do |f| %>
 
   <div>
-    タイトル
+    ダイエット方法のタイトル
     <span>必須</span>
   </div>
   <%= f.text_area :title, placeholder:"タイトル（必須・40文字まで）" %>
+  
+  <div>
+    ダイエットの種類
+    <span>必須</span>
+  </div>
+  <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {placeholder:"タイトル（必須・40文字まで）"}) %>
+
+  <div>
+    説明
+    <span>必須</span>
+  </div>
+  <%= f.text_area :explanation, placeholder:"説明（必須・1024文字まで）" %>
+  
+  <div>
+    痩せやすさ  
+    <span>実行済でなければ無記入にしましょう</span>
+  </div>
+
+  <div>
+    続けやすさ
+    <span>実行済でなければ無記入にしましょう</span>
+  </div>
+  <%= f.select :ease_of_continuation, placeholder:"説明（必須・1024文字まで）" %>
+
 
 <% end %>
 </div>

@@ -1,9 +1,8 @@
 class DietMethod < ApplicationRecord
   with_options presence: true do
     validates :title
-    validates :type_id
+    validates :type_id, numericality: { other_than: 1 }
     validates :explanation
-    validates :genre_id,    numerically: { other_than: 1 }
   end
 
   belongs_to :user
