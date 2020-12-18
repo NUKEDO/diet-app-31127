@@ -17,3 +17,13 @@
  * {
   box-sizing: border-box;
 }
+
+@import "bulma";
+
+body {
+  min-height: 100vh;
+  color: white;
+  // グラデーション
+  background-image: linear-gradient(to right, #6a11cb, #2575fc 100%);
+  font-family: sans-serif;
+}
