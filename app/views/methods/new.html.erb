@@ -1,37 +1,62 @@
 <h1>ダイエット方法投稿</h1>
 <div></div>
 <div>
-<%= form_with model: @diet_method, url: methods_path, method: :post, local: true do |f| %>
 
-  <div>
-    ダイエット方法のタイトル
-    <span>必須</span>
-  </div>
-  <%= f.text_area :title, placeholder:"タイトル（必須・40文字まで）" %>
-  
-  <div>
-    ダイエットの種類
-    <span>必須</span>
-  </div>
-  <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {placeholder:"タイトル（必須・40文字まで）"}) %>
+  <div class="rating-box mt-3">
+  <%= form_with model: @diet_method, url: methods_path, method: :post, local: true do |f| %>
 
-  <div>
-    説明
-    <span>必須</span>
-  </div>
-  <%= f.text_area :explanation, placeholder:"説明（必須・1024文字まで）" %>
-  
-  <div>
-    痩せやすさ  
-    <span>実行済でなければ無記入にしましょう</span>
-  </div>
+    <div>
+      ダイエット方法のタイトル
+      <span>必須</span>
+    </div>
+    <%= f.text_area :title, placeholder:"タイトル（必須・40文字まで）" %>
+    
+    <div>
+      ダイエットの種類
+      <span>必須</span>
+    </div>
+    <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {placeholder:"タイトル（必須・40文字まで）"}) %>
 
-  <div>
-    続けやすさ
-    <span>実行済でなければ無記入にしましょう</span>
-  </div>
-  <%= f.select :ease_of_continuation, placeholder:"説明（必須・1024文字まで）" %>
-
-
-<% end %>
+    <div>
+      説明
+      <span>必須</span>
+    </div>
+    <%= f.text_area :explanation, placeholder:"説明（必須・1024文字まで）" %>
+    
+    <div>
+      痩せやすさ
+      <div class="main-rating">
+        <div class="reduction-star mb-3">
+          <span class="fa fa-star-o" id="star"></span>
+          <span class="fa fa-star-o" id="star"></span>
+          <span class="fa fa-star-o" id="star"></span>
+          <span class="fa fa-star-o" id="star"></span>
+          <span class="fa fa-star-o" id="star"></span>
+        </div>
+        <div class="ml-3 reduction-count"><span id="reduction-count">0</span>/5</div>
+      </div>
+      <span>実行済でなければ無記入にしましょう</span>
+    </div>
+    <%= f.hidden_field :ease_of_reduction, id: "reduction-count-number" %>
+    
+    <div>
+      続けやすさ
+      <div class="main-rating">
+        <div class="continuation-star" mb-3">
+          <span class="fa fa-star-o" id="star"></span>
+          <span class="fa fa-star-o" id="star"></span>
+          <span class="fa fa-star-o" id="star"></span>
+          <span class="fa fa-star-o" id="star"></span>
+          <span class="fa fa-star-o" id="star"></span>
+        </div>
+        <div class="ml-3 continuation-count"><span id="continuation-count">0</span>/5</div>
+      </div>
+      <span>実行済でなければ無記入にしましょう</span>
+    </div>
+  <%= f.hidden_field :ease_of_continuation, id: "continuation-count-number" %>
+  <%= f.submit "保存", class: "button mt-3" %>
+  <% end %>
 </div>
+</div>
+
+<%= javascript_pack_tag "methods.js" %>

@@ -7,6 +7,15 @@ class MethodsController < ApplicationController
 
   def create
     @diet_method = DietMethod.new(diet_method_params)
+    if @diet_method.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
+  def show
+    @diet_method = DietMethod.find(params[:id])
   end
 
   private

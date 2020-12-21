@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+DietMethod.create(title: "オートミール", type_id: 2, explanation: "主食置き換えダイエット", user_id: 1)
